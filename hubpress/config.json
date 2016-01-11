@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "Lh4cKg",
-    "repositoryName": "Lh4cKg.github.io",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "Casper"
-  }
-}
+{"meta":{"username":"Lh4cKg","repositoryName":"Lh4cKg.github.io","branch":"master"},"site":{"title":"Python Coding!","description":"Python/Django && Linux && Programming && Art","postsPerPage":"12","url":"https://Lh4cKg.github.io"},"socialnetwork":{"email":"lhackg@yandex.com","facebook":"facebook.com/goguaaaa","github":"github.com/lh4ckg"},"theme":{"name":"Casper","url":"//Lh4cKg.github.io/themes/Casper"}}
