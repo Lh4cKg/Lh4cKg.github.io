@@ -1,6 +1,6 @@
-= ახალი
-:hp-alt-title: new
+= როგორ დავაყენოთ პითონი ჩვენს კომპიუტერზე
+:hp-alt-title: ჰო
 
-asaasas
 
-:hp-tags: asa
+
+:hp-tags: 
