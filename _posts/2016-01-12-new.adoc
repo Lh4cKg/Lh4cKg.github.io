@@ -1,4 +1,5 @@
-= new
+= ახალი
+:hp-alt-title: new
 
 asaasas
 
