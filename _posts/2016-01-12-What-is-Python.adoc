@@ -1,6 +1,6 @@
 = რა არის პითონი?
 :hp-alt-title: What is Python?
-image::https://www.python.org/static/img/python-logo.png
+:hp-image: https://www.python.org/static/img/python-logo.png
 
 პითონი არის ინტერპრეტირებული, ობიექტზე ორიენტირებული, მაღალი დონის პროგრამირების ენა დინამიური სემანტიკით.
 
