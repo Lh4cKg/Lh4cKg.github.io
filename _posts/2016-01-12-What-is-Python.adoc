@@ -44,4 +44,4 @@
 4. https://ka.wikipedia.org/wiki/პითონი_(პროგრამირების_ენა)
 5. https://wiki.python.org/moin/
 
-:hp-tags: პითონი,პროგრამირება,ენა
+:hp-tags: title[პითონი],title[პროგრამირება],title[ენა]
