@@ -6,9 +6,11 @@
 
 debian/ubuntu დისტრიბუტივებზე შეგვიძლია გავუშვათ ბრძანება
 მაგ. თუ გვინდა 2.x ვერსიის დაყენება
+
  * sudo apt-get install python2.7
 
 თუ გვინდა 3.x ვერსიის დაყენება
+
  * sudo apt-get install python3.3
  
 
