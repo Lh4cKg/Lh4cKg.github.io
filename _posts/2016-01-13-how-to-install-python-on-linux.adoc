@@ -1,0 +1,4 @@
+= როგორ დავაყენოთ პითონი ლინუქსზე
+:hp-alt-title: how to install python on linux
+
+:hp-tags: პითონი,ლინუქსი
