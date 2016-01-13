@@ -1,7 +1,29 @@
 = როგორ დავაყენოთ პითონი ლინუქსზე
 :hp-alt-title: how to install python on linux
 
-პითონის დაყენება შეიძლება ნებისმიერ ოპერაციულ სისტემაზე. როგორებიცაა მაგ: Windows, Unix და Linux ოპერაციულ სისტემებზე.
-მარტივი გზა პითონის დასაყენებლად არის package manager ის გამოყენება, როგორებიცაა apt-get, yum, pacman და ა.შ.
+პითონის დაყენება შეიძლება ნებისმიერ ოპერაციულ სისტემაზე. როგორებიცაა მაგ. Windows, Unix და Linux ოპერაციულ სისტემებზე.
+მარტივი გზა პითონის დასაყენებლად არის package manager ის გამოყენება, მაგ. apt-get, yum, pacman და ა.შ.
+
+debian/ubuntu დისტრიბუტივებზე შეგვიძლია გავუშვათ ბრძანება
+მაგ. თუ გვინდა 2.x ვერსიის დაყენება
+
+ * sudo apt-get install python2.7
+
+თუ გვინდა 3.x ვერსიის დაყენება
+
+ * sudo apt-get install python3.3
+ 
+
+ასევე შეგვიძლია დავაყენოთ ბოლო ვერსია სორსიდან, სორსის გადმოწერა შეგიძლიათ პითონის ოფიციალური გვერდიდან ან Ftp დან - https://www.python.org/ftp/python/ [Python Source Code] ვირჩევთ ბოლო ვერსიას 3.5.1 და ვიწერთ *.tgz ფორმატის ფაილს Python-3.5.1.tgz
+
+ * wget http://python.org/ftp/python/3.5.1/Python-3.5.1.tgz
+ * tar -xvf Python-3.5.1.tgz
+ * cd Python-3.5.1
+ * ./configure
+ * make
+ * make altinstall
+ 
+პითონის დაყენების პროცესი წარმატებით დასრულდა.
+
 
 :hp-tags: title[პითონი],title[ლინუქსი]
