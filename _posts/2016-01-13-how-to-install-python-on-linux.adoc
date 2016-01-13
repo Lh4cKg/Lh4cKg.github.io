@@ -25,6 +25,6 @@ debian/ubuntu დისტრიბუტივებზე შეგვიძ�
  
 პითონის დაყენების პროცესი წარმატებით დასრულდა.
 იხ. სურათი
-image:: https://github.com/Lh4cKg/Lh4cKg.github.io/blob/master/images/pythonge.png
+image::https://github.com/Lh4cKg/Lh4cKg.github.io/blob/master/images/pythonge.png []
 
 :hp-tags: title[პითონი],title[ლინუქსი]
