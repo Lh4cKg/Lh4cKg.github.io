@@ -1,5 +1,6 @@
 = როგორ დავაყენოთ პითონი ლინუქსზე
 :hp-alt-title: how to install python on linux
+:hp-image: https://raw.githubusercontent.com/Lh4cKg/Lh4cKg.github.io/master/images/python-pip.png
 
 პითონის დაყენება შეიძლება ნებისმიერ ოპერაციულ სისტემაზე. როგორებიცაა მაგ. Windows, Unix და Linux ოპერაციულ სისტემებზე.
 მარტივი გზა პითონის დასაყენებლად არის package manager ის გამოყენება, მაგ. apt-get, yum, pacman და ა.შ.
