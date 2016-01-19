@@ -86,3 +86,5 @@ image:https://raw.githubusercontent.com/Lh4cKg/Lh4cKg.github.io/master/images/in
   * deactivate # ბრძანებით.
   
 დამატებით ინფორმაციისთვის გამოიყენეთ https://virtualenv.pypa.io/en/latest/index.html[დოკუმენტაცია.]
+
+:hp-tags: pip,module[მოდული],virtualenv,python[პითონი]
