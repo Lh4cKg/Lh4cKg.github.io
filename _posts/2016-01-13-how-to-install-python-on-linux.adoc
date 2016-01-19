@@ -29,4 +29,4 @@ debian/ubuntu დისტრიბუტივებზე შეგვიძ�
 ნახეთ სურათი
 image:https://raw.githubusercontent.com/Lh4cKg/Lh4cKg.github.io/master/images/pythonge.png []
 
-:hp-tags: title[პითონი],title[ლინუქსი]
+:hp-tags: python[პითონი],linux[ლინუქსი]
