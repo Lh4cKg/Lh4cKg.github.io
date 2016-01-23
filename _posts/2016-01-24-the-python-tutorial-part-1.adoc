@@ -9,7 +9,7 @@
 
 ეს გაკვეთილი არაფორმალურად წარუდგენს მკითხველს, პითონის ძირითად ცნებებს, თვისებებს და სისტემას. ეს ხელს უწყობს ქონდეს პითონის ინტერპრეტატორში პრაქტიკული გამოცდილება.
 
-ამისთვის აღწერილია  სტანდარტული ობიექტები და მოდულები, იხილეთ პითონის სტანდარტული ბიბლიოთეკა(https://docs.python.org/3.5/library/index.html#library-index[Python Standard Library]). https://docs.python.org/3.5/reference/index.html#reference-index[Python Language Reference] იძლევა უფრო ფორმალურ განმარტებას ენაზე. კოდის დაწერა შესაძლებელია C, C++ ზე, წაიკითხეთ https://docs.python.org/3.5/extending/index.html#extending-index[Extending and Embedding the Python Interpreter] და https://docs.python.org/3.5/c-api/index.html#c-api-index[Python/C API Reference Manual.] ასევე არსებობს რამდენიმე წიგნი, რომელიც მოიცავს პითონს სიღრმისეულად.
+ამისთვის აღწერილია  სტანდარტული ობიექტები და მოდულები, იხილეთ პითონის სტანდარტული ბიბლიოთეკა(https://docs.python.org/3.5/library/index.html#library-index[Python Standard Library]). https://docs.python.org/3.5/reference/index.html#reference-index[Python Language Reference] იძლევა უფრო ფორმალურ განმარტებას ენაზე. კოდის დაწერა შესაძლებელია C ან C++ ზე, წაიკითხეთ https://docs.python.org/3.5/extending/index.html#extending-index[Extending and Embedding the Python Interpreter] და https://docs.python.org/3.5/c-api/index.html#c-api-index[Python/C API Reference Manual.] ასევე არსებობს რამდენიმე წიგნი, რომელიც მოიცავს პითონს სიღრმისეულად.
 
 შესავალი:
 
