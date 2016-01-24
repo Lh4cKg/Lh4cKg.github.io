@@ -1,6 +1,6 @@
 = პითონის სახელმძღვანელო - შესავალი. ნაწილი 1
 :hp-alt-title: the python tutorial - part 1
-:hp-image: https://raw.githubusercontent.com/Lh4cKg/Lh4cKg.github.io/master/images/pytut.jpg
+:hp-image: https://raw.githubusercontent.com/Lh4cKg/Lh4cKg.github.io/master/images/pytutn.jpg
 
 პითონი არის ადვილად სასწავლი, ძლიერი პროგრამირების ენა. მას აქვს ეფექტური მაღალი დონის მონაცემთა სტრუქტურები და მარტივი, მაგრამ ეფექტური მიდგომა ობიექტზე ორიენტირებული პროგრამირების(OOP). პითონის ელეგანტური სინტაქსი და დინამიურობასთან ერთად ინტერპრეტირებული გარემო, ქმნის იდეალურ ენას სკრიპტინგისთვის(scripting) და აპლიკაციის სწრაფად განვითარებას ბევრ სფეროში საუკეთესო პლატფორმებზე.
 
