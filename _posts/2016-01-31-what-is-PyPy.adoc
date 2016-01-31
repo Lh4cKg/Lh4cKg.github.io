@@ -1,0 +1,6 @@
+= რა არის PyPy?
+:hp-alt-title: what is PyPy?
+
+
+
+:hp-tags: PyPy, python[პითონი]
