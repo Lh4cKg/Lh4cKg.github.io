@@ -19,9 +19,10 @@ debian/ubuntu დისტრიბუტივებზე შეგვიძ�
 
  * wget http://python.org/ftp/python/3.5.1/Python-3.5.1.tgz
  * tar -xvf Python-3.5.1.tgz
- * cd Python-3.5.1
+ * sudo mv Python-3.5.1 /opt/
+ * cd /opt && cd Python-3.5.1
  * ./configure
- * make
+ * sudo make
  * sudo make altinstall
  
 პითონის დაყენების პროცესი წარმატებით დასრულდა.
