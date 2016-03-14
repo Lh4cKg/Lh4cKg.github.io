@@ -1,6 +1,6 @@
-= აღძრავს თქვენს მადას
+= პითონის სახელმძღვანელო - აღძრავს თქვენს მადას. ნაწილი 2
 :hp-title: Whetting Your Appetite
 
 
 
-:hp-tags: docs[დოკუმენტაცია],python[პითონი]
+:hp-tags: docs[დოკუმენტაცია],python[პითონი],tutorial[გაკვეთილი]
