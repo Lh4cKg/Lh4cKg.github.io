@@ -20,16 +20,18 @@
     <meta property="og:site_name" content="Python Coding!" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="რა არის PyPy?" />
-    <meta property="og:description" content="..." />
+    <meta property="og:description" content="Pypy არის სწრაფი, თავსებადი ალტერნატიული განხორციელება პითონის ენის (2.7.10 და 3.2.5). მას აქვს რამდენიმე უპირატესობა და გამოკვეთილი თვისებები. არის პითონის ინტერპრეტატორი(თარჯიმანი) და JIT კომპილერი, PyPy აქცენტს აკეთებს სისწრაფეზე, ეფექტურობაზე და თავსებადია ორიგინალ CPython ი..." />
     <meta property="og:url" content="https://Lh4cKg.github.io/2016/01/31/what-is-PyPy.html" />
     <meta property="article:published_time" content="2016-01-30T20:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-02-28T18:02:28.843Z" />
+    <meta property="article:modified_time" content="2016-03-14T09:31:34.677Z" />
     <meta property="article:tag" content="PyPy" />
+    <meta property="article:tag" content="Compiler[კომპილერი]" />
+    <meta property="article:tag" content="JIT" />
     <meta property="article:tag" content="python[პითონი]" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="რა არის PyPy?" />
-    <meta name="twitter:description" content="..." />
+    <meta name="twitter:description" content="Pypy არის სწრაფი, თავსებადი ალტერნატიული განხორციელება პითონის ენის (2.7.10 და 3.2.5). მას აქვს რამდენიმე უპირატესობა და გამოკვეთილი თვისებები. არის პითონის ინტერპრეტატორი(თარჯიმანი) და JIT კომპილერი, PyPy აქცენტს აკეთებს სისწრაფეზე, ეფექტურობაზე და თავსებადია ორიგინალ CPython ი..." />
     <meta name="twitter:url" content="https://Lh4cKg.github.io/2016/01/31/what-is-PyPy.html" />
     
     <script type="application/ld+json">
@@ -47,9 +49,9 @@
     "headline": "რა არის PyPy?",
     "url": "https://Lh4cKg.github.io/2016/01/31/what-is-PyPy.html",
     "datePublished": "2016-01-30T20:00:00.000Z",
-    "dateModified": "2016-02-28T18:02:28.843Z",
-    "keywords": "PyPy,  python[პითონი]",
-    "description": "..."
+    "dateModified": "2016-03-14T09:31:34.677Z",
+    "keywords": "PyPy,  Compiler[კომპილერი],  JIT,  python[პითონი]",
+    "description": "Pypy არის სწრაფი, თავსებადი ალტერნატიული განხორციელება პითონის ენის (2.7.10 და 3.2.5). მას აქვს რამდენიმე უპირატესობა და გამოკვეთილი თვისებები. არის პითონის ინტერპრეტატორი(თარჯიმანი) და JIT კომპილერი, PyPy აქცენტს აკეთებს სისწრაფეზე, ეფექტურობაზე და თავსებადია ორიგინალ CPython ი..."
 }
     </script>
 
@@ -57,7 +59,7 @@
     <link rel="alternate" type="application/rss+xml" title="Python Coding!" href="https://Lh4cKg.github.io/rss" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 </head>
-<body class="post-template tag-PyPy tag-python">
+<body class="post-template tag-PyPy tag-Compiler tag-JIT tag-python">
 
     
 
@@ -71,17 +73,58 @@
 
 <main class="content" role="main">
 
-    <article class="post tag-PyPy tag-python">
+    <article class="post tag-PyPy tag-Compiler tag-JIT tag-python">
 
         <header class="post-header">
             <h1 class="post-title">რა არის PyPy?</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-01-31">31 January 2016</time>  on <a href="https://Lh4cKg.github.io/tag/PyPy">PyPy</a>, <a href="https://Lh4cKg.github.io/tag/python"> python[პითონი]</a>
+                <time class="post-date" datetime="2016-01-31">31 January 2016</time>  on <a href="https://Lh4cKg.github.io/tag/PyPy">PyPy</a>, <a href="https://Lh4cKg.github.io/tag/Compiler"> Compiler[კომპილერი]</a>, <a href="https://Lh4cKg.github.io/tag/JIT"> JIT</a>, <a href="https://Lh4cKg.github.io/tag/python"> python[პითონი]</a>
             </section>
         </header>
 
         <section class="post-content">
-            
+            <div class="paragraph">
+<p>Pypy არის <a href="http://speed.pypy.org/">სწრაფი</a>, <a href="http://pypy.org/compat.html">თავსებადი</a> ალტერნატიული განხორციელება <a href="http://python.org/">პითონის</a> ენის (2.7.10 და 3.2.5). მას აქვს რამდენიმე უპირატესობა და გამოკვეთილი თვისებები. არის პითონის ინტერპრეტატორი(თარჯიმანი) და JIT კომპილერი, PyPy აქცენტს აკეთებს სისწრაფეზე, ეფექტურობაზე და თავსებადია ორიგინალ CPython ინტერპრეტატორთან. არის ჩანაცვლება CPython-ის. ის შექმნილია RPython ენის გამოყენებით. ძირითადი მიზეზი გამოიყენოთ PyPy ნაცვლად CPython-ისა არის სისწრაფე(სიჩქარე): ის მუშაობს უფრო სწრაფად ვიდრე CPython.</p>
+</div>
+<div class="paragraph">
+<p>PyPy ახორციელებს Python 2.7.10 და ეშვება <a href="http://en.wikipedia.org/wiki/IA-32">Intel x86 (IA-32)</a> , <a href="http://en.wikipedia.org/wiki/X86_64">x86_64</a> და <a href="http://en.wikipedia.org/wiki/ARM">ARM</a> პლატფორმებზე. ის მხარს უჭერს ყველა ძირითად ენას, პითონის test suite -ის გავლით (უმნიშვნელო ცვლილება, რომელიც უკვე მიღებულია პითონის ახალ ვერსიებში). ის მხარს უჭერს ყველაზე ხშირად გამოყენებად პითონის სტანდარტული ბიბლიოთეკის მოდულებს. ცნობილია განსხვავებები CPython თან, ნახეთ <a href="http://pypy.org/compat.html">თავსებადობის</a> გვერდზე.</p>
+</div>
+<div class="paragraph">
+<p>PyPy-ს ასევე აქვს ბეტა რელიზი PyPy3 ზე რომელიც ახორციელებს Python 3.2.5. ის მუშაობს იგივე პლატფორმაზე როგორც ზემოთ არის მოყვანილი.</p>
+</div>
+<div class="paragraph">
+<p>PyPy ძირითადი თვისებები:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>სისწრაფე
+ჩვენს <a href="http://pypy.org/download.html#with-a-jit-compiler">მთავარ გამშვებს</a> გააჩნია JIT კომპილერი
+არსებობს ორი შემთხვევა, რომ თქვენ უნდა იცოდეთ, სადაც PyPy ვერ შეძლებს დააჩქაროს თქვენი კოდი:</p>
+</li>
+<li>
+<p>მოკლე გაშვებული პროცესები</p>
+</li>
+<li>
+<p>თუ სრული დრო იხარჯება ბიბლიოთეკების გაშვებაში (ანუ იგულისხმება C ფუნქციები) და არა რეალურად გაშვებული Python კოდზე,მაშინ JIT კომპილერი ვერ დაგეხმარებათ</p>
+<div class="literalblock">
+<div class="content">
+<pre>პითონის პროგრამები ხშირად ეშვება http://speed.pypy.org/[სწრაფად] PyPy ზე. (http://en.wikipedia.org/wiki/Just-in-time_compilation[რა არის JIT კომპილეერი?])
+"თუ თქვენ გსურთ , რომ თქვენი კოდი იყოს სწრაფი, თქვენ უნდა გამოიყენოთ PyPy" - Gudio van Rossum (პითონის შემქმნელი)</pre>
+</div>
+</div>
+</li>
+<li>
+<p>მეხსიერების გამოყენება</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>მეხსიერების უკმარისობა პითონზე დაწერილი პროგრამები (ასობით მეგაბაიტს ან მეტს) შეიძლება მოიხმარდნენ, PyPy ცდილობს, რომ რაც შეიძლება ნაკლები მოიხმაროს CPython-თან შედარებით. ეს არ არის ყოველთვის არგუმენტი, რადგან ყველაფერი დეტალებზეა დამოკიდებული. ასევე გაითვალისწინეთ, რომ baseline უფრო მაღალია ვიდრე CPython-ის შემთხვევაში.</p>
+</div>
+<div class="paragraph">
+<p>თუ თქვენ ხართ დახმარებით დაინტერესებული, ნახეთ <a href="http://pypy.org/howtohelp.html">დახმარების</a> გვერდი.</p>
+</div>
         </section>
 
         <footer class="post-footer">
