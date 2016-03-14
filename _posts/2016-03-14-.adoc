@@ -1,0 +1,6 @@
+= აღძრავს თქვენს მადას
+:hp-title: Whetting Your Appetite
+
+
+
+:hp-tags: docs[დოკუმენტაცია],python[პითონი]
