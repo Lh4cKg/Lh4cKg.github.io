@@ -1,0 +1,5 @@
+= პითონის ინტერპრეტატორის გამოყენება
+:hp-alt-title: Using the Python Interpreter
+
+
+:hp-tags: docs[დოკუმენტაცია],python[პითონი],tutorial[გაკვეთილი]
