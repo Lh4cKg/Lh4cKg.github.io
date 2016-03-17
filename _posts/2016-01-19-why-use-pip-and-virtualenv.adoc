@@ -72,6 +72,7 @@ image:https://raw.githubusercontent.com/Lh4cKg/Lh4cKg.github.io/master/images/in
 თუ გვსურს რომელიმე ბიბლიოთეკის წაშლა მაგ. django
  
   * pip uninstall django
+  
     .....
     Proceed (y/n)? y # ვეთანხმებით y ჩაწერით რის შემდეგ ბიბლიოთეკა წაიშლება ვირტუალური გარემოდან.
   
