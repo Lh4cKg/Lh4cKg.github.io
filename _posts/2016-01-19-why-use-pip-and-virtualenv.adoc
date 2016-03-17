@@ -58,6 +58,7 @@ image:https://raw.githubusercontent.com/Lh4cKg/Lh4cKg.github.io/master/images/ve
 შევამოწმოთ დაყენდა თუ არა django
 
  * pip list
+ 
    Django (1.9.1)
    pip (7.1.2)
    setuptools (18.2)
