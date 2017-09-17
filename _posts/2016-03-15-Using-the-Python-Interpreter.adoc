@@ -1,4 +1,4 @@
-= პითონის ინტერპრეტატორის გამოყენება
+= პითონის ინტერპრეტატორის გამოყენება. ნაწილი 3
 :compat mode: true
 :hp-alt-title: Using the Python Interpreter
 
