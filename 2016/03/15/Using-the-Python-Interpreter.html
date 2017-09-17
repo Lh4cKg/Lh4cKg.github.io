@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Python Coding - პროგრამირება პითონზე" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="პითონის ინტერპრეტატორის გამოყენება" />
-    <meta property="og:description" content="..." />
+    <meta property="og:description" content="ინტერპრატატორის ჩართვა პითონის ინტერპრეტატორი ჩვევლებრივ ინსტალირდება როგორც წესი /usr/local/bin/python3.5 იმ მანქანებზე სადაც ეს შესაძლებელია, რომელიც აკეთებს putting /usr/local/bin-ში და Unix/Linux-ის shell-ი ეძებს შესაძლო path-ს რომლის მეშვეობითაც ბრძანების python3.5 შეყვანის..." />
     <meta property="og:url" content="https://Lh4cKg.github.io/2016/03/15/Using-the-Python-Interpreter.html" />
     <meta property="article:published_time" content="2016-03-14T20:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-09-07T12:26:24.402Z" />
+    <meta property="article:modified_time" content="2017-09-17T09:22:07.312Z" />
     <meta property="article:tag" content="docs[დოკუმენტაცია]" />
     <meta property="article:tag" content="python[პითონი]" />
     <meta property="article:tag" content="tutorial[გაკვეთილი]" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="პითონის ინტერპრეტატორის გამოყენება" />
-    <meta name="twitter:description" content="..." />
+    <meta name="twitter:description" content="ინტერპრატატორის ჩართვა პითონის ინტერპრეტატორი ჩვევლებრივ ინსტალირდება როგორც წესი /usr/local/bin/python3.5 იმ მანქანებზე სადაც ეს შესაძლებელია, რომელიც აკეთებს putting /usr/local/bin-ში და Unix/Linux-ის shell-ი ეძებს შესაძლო path-ს რომლის მეშვეობითაც ბრძანების python3.5 შეყვანის..." />
     <meta name="twitter:url" content="https://Lh4cKg.github.io/2016/03/15/Using-the-Python-Interpreter.html" />
     
     <script type="application/ld+json">
@@ -41,16 +41,16 @@
     "author": {
         "@type": "Person",
         "name": "4o4u4 (L.G)",
-        "image": "https://avatars.githubusercontent.com/u/3719921?v=3",
+        "image": "https://avatars3.githubusercontent.com/u/3719921?v=4",
         "url": "undefined/author/undefined",
         "sameAs": "http://python.ge"
     },
     "headline": "პითონის ინტერპრეტატორის გამოყენება",
     "url": "https://Lh4cKg.github.io/2016/03/15/Using-the-Python-Interpreter.html",
     "datePublished": "2016-03-14T20:00:00.000Z",
-    "dateModified": "2016-09-07T12:26:24.402Z",
+    "dateModified": "2017-09-17T09:22:07.312Z",
     "keywords": "docs[დოკუმენტაცია], python[პითონი], tutorial[გაკვეთილი]",
-    "description": "..."
+    "description": "ინტერპრატატორის ჩართვა პითონის ინტერპრეტატორი ჩვევლებრივ ინსტალირდება როგორც წესი /usr/local/bin/python3.5 იმ მანქანებზე სადაც ეს შესაძლებელია, რომელიც აკეთებს putting /usr/local/bin-ში და Unix/Linux-ის shell-ი ეძებს შესაძლო path-ს რომლის მეშვეობითაც ბრძანების python3.5 შეყვანის..."
 }
     </script>
 
@@ -82,14 +82,72 @@
         </header>
 
         <section class="post-content">
-            
+            <div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ინტერპრატატორის ჩართვა</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>პითონის ინტერპრეტატორი ჩვევლებრივ ინსტალირდება როგორც წესი /usr/local/bin/python3.5 იმ მანქანებზე სადაც ეს შესაძლებელია, რომელიც აკეთებს putting /usr/local/bin-ში და Unix/Linux-ის shell-ი ეძებს შესაძლო path-ს რომლის მეშვეობითაც ბრძანების python3.5 შეყვანის შემდეგ შესაძლებელი ხდება პითონის ინტერპრეტატორის ჩართვა.</p>
+</div>
+<div class="paragraph">
+<p>Windows-ის მანქანებზე პითონის ინსტალაცია სტანდარტულად ხდება C:\Python35, რომლის შეცვლასაც შეძლებთ პროგრამის ინსტალაციის გაშვებისას.</p>
+</div>
+<div class="paragraph">
+<p>პითონის ბრძანებების სია და აღწერა იხილეთ აქ Command line and environment.</p>
+</div>
+<div class="paragraph">
+<p>2 არგუმენტის გადაწოდება</p>
+</div>
+<div class="paragraph">
+<p>როდესაც ინტერპრეტატორისთვის ცნობილია ჩანაწერის სახელი და დამატებითი არგუმენტები, შემდგომ argv ცვლადი ენიჭება sys მოდულს. ეს სია თქვენთვის ხელმისაწვდომი გახდება მას შემდეგ რაც თქვენ განახორციელებთ sys მოდულის იმპორტს. სიის სიგრძე მინიმუმ ერთია; როდესაც არ არის სკრიპტი და არ არსებობს არგუმენტები, sys.argv[0] არის ცარიელი სტრიქონი. როდესაც სკრიპტს გადაეწოდება როგორც ’-’ (რაც ნიშნავს სტანდარტულ შეყვანას), sys.argv[0] გახდება ’-’. როდესაც –c  ბრძანება იქნება გამოყენებული, sys.argv[0] გახდება ’-c’. როდესაც -m მოდულს ვიყენებთ sys.argv[0]-ში ყენდება მოცემული მოდულის სრული სახელით. პარამეტრების საძიებო სისტემაში c ბრძანება ან m მოდული  არ მოქმედებს  Python Interpreter-ში დამუშავების დროს, მაგრამ დარჩა sys.argv-ში ბრძანების ან მოდულის დამუშავებისთვის.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ინტერაქტიული რეჟიმი</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>როდესაც ბრძანებები იკითხება tty-დან, ინტერპრეტატორი გამოიძახება ინტერაქტიულ რეჟიმში. ამ რეჟიმში იწარმოება მოთხოვნა შემდეგი ბრძანებისთვის ძირითადი სტროფებით, სტანდარტულად სამი მეტობის ნიშნით (&gt;&gt;&gt;); მეორადი ხასის გაგრძელებისთვის სტანდარტულდ იყენებს სამ წერტილს (&#8230;&#8203;). ინტერპრეტატორი პირველივე სტროფის დაბეჭდავამდე მისასალმებელ შეტყობინებას ბეჭდავს, რომელშიც აღნიშნულია მისი ვერსიის ნომერი და განაცხადი საავტორო უფლებების შესახებ.
+$ python3.5
+Python 3.5 (default, Sep 16 2015, 09:25:04)
+[GCC 4.8.2] on linux
+Type "help", "copyright", "credits" or "license" for more information.&gt;&gt;&gt;
+ხაზის გაგრძელებისთვის საჭიროა კონსტრუქციაში რამოდენიმე სიტყვის შეყვანა. მაგალითისთვის, შეხედეთ ამ if ოპერატორს:
+&gt;&gt;&gt; the_world_is_flat = True
+&gt;&gt;&gt; if the_world_is_flat:
+&#8230;&#8203;     print("Be careful not to fall off!")
+&#8230;&#8203;
+Be careful not to fall off!
+იმისათვის, რომ შეიტყოთ მეტი ინტერაქტიული რეჟიმის შესახებ გადახედეთ Interactive Mode-ს.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ინტერპრეტატორი და მისი გარემოცვა - კოდის წყაროს ენკოდირება</p>
+<div class="literalblock">
+<div class="content">
+<pre> სტანდარტულად, პითონის საწყისი ფაილი განიხილება, როგორც UTF-8-ში კოდირებული. ამ კოდირებაში მსოფლიოს უმეტესი ენების სიმბოლოები შესაძლებელია გამოყენებულიქნან ერთდროულად ლიტერალი სტროფის, ინდტიფიკატორის და კომენტარის, თუმცა სტანდარტულ ბიბლიოთეკაში ინდეტიფიკატორისთვის ის გამოიყენება მხოლოდ ASCII-ის სიმბოლოების სახით, რადგან არსებობს პორტატული კოდების შეთანხმება, რომელიც უნდა დაიცვას ყველა კოდმა. იმისათვის, რომ რედაქტორმა დაწეროს ყველა სიმბოლო, სწორედ მან უნდა აღიქვას UTF-8 ფაილი და ასევე უნდა გამოიყენოს შრიფტი, რომელის მხარდაჭერაც გააჩნია მოცემულ ფაილს. ამის გარდა შესაძლოა სხვა კოდირების მითითება საწყისი ფაილისთვის. ამისათვის ჩაწერეთ კიდევ ერთი განსაკუთრებული კომენტარი # დაწერის შემდეგ! ეს საჭიროა იმისათვის, რომ გაიგოთ პირვანდელი ფაილის კოდი:
+# -*- coding: encoding -*-
+ამ განაცხადის მეშვეობით ყველაფერი რაც არის პირვანდელ ფაილში განიხილება, როგორც კოდის მქონე, UTF-8 კოდირების ნაცვლად. შესაძლო კოდირებების სიის მოძებნას შეძლებთ Python Library Reference-ში, კოდების განყოფილებაში. მაგალითად, თუ თქვენს რედაქტორს არ გააჩნია UTF-8-ს კოდირებული ფაილების მხარდაჭერა და ის ითხოვს სხვა რაიმე კოდირებას მაგალითად  Windows-1252, უბრალოდ ჩაწერეთ:
+# -*- coding: cp-1252 -*-
+და უწინდებურად გამოიყენეთ ყველა Windows-1252-ის სიმბოლო საწყის ფაილში. სპეციალური კოდირების კომენტარი განლაგებული უნდა იყოს ფაილის პირველ ან მეორე სტროფზე.</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
         </section>
 
         <footer class="post-footer">
 
 
             <figure class="author-image">
-                <a class="img" href="" style="background-image: url(https://avatars.githubusercontent.com/u/3719921?v=3)"><span class="hidden">4o4u4 (L.G)'s Picture</span></a>
+                <a class="img" href="" style="background-image: url(https://avatars3.githubusercontent.com/u/3719921?v=4)"><span class="hidden">4o4u4 (L.G)'s Picture</span></a>
             </figure>
 
             <section class="author">
@@ -129,7 +187,7 @@
 
 
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="https://Lh4cKg.github.io">Python Coding - პროგრამირება პითონზე</a> &copy; 2016</section>
+        <section class="copyright"><a href="https://Lh4cKg.github.io">Python Coding - პროგრამირება პითონზე</a> &copy; 2017</section>
         <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
     </footer>
 
