@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>არაფორმარული შესავალი პითონზე. ნაწილი 4</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="//Lh4cKg.github.io/themes/Casper/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//Lh4cKg.github.io/themes/Casper/assets/css/screen.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="https://Lh4cKg.github.io/2017/09/17/An-Informal-Introduction-to-Python.html" />
+    
+    <meta property="og:site_name" content="Python Coding - პროგრამირება პითონზე" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="არაფორმარული შესავალი პითონზე. ნაწილი 4" />
+    <meta property="og:description" content="შემდგომ მაგალითებში შეტანა და გამოტანა განსხვავდება მოთხოვნათა არსებობით ან არ არსებობით (&amp;gt;&amp;gt;&amp;gt; და &amp;#8230;&amp;#8203;) გავიხსენოთ მაგალითები, ნებისმიერი ტექსტი უნდა შეიყვანოთ გამოძახების შემდეგ. განაცხადის ეკრანზე გამოჩენის შემდეგ თუ ხაზები არ გამოჩნდება მაშინ ისინი გამოიძახე..." />
+    <meta property="og:url" content="https://Lh4cKg.github.io/2017/09/17/An-Informal-Introduction-to-Python.html" />
+    <meta property="article:published_time" content="2017-09-16T20:00:00.000Z" />
+    <meta property="article:modified_time" content="2017-09-17T18:44:38.042Z" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="არაფორმარული შესავალი პითონზე. ნაწილი 4" />
+    <meta name="twitter:description" content="შემდგომ მაგალითებში შეტანა და გამოტანა განსხვავდება მოთხოვნათა არსებობით ან არ არსებობით (&amp;gt;&amp;gt;&amp;gt; და &amp;#8230;&amp;#8203;) გავიხსენოთ მაგალითები, ნებისმიერი ტექსტი უნდა შეიყვანოთ გამოძახების შემდეგ. განაცხადის ეკრანზე გამოჩენის შემდეგ თუ ხაზები არ გამოჩნდება მაშინ ისინი გამოიძახე..." />
+    <meta name="twitter:url" content="https://Lh4cKg.github.io/2017/09/17/An-Informal-Introduction-to-Python.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Python Coding - პროგრამირება პითონზე",
+    "author": {
+        "@type": "Person",
+        "name": "4o4u4 (L.G)",
+        "image": "https://avatars3.githubusercontent.com/u/3719921?v=4",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://python.ge"
+    },
+    "headline": "არაფორმარული შესავალი პითონზე. ნაწილი 4",
+    "url": "https://Lh4cKg.github.io/2017/09/17/An-Informal-Introduction-to-Python.html",
+    "datePublished": "2017-09-16T20:00:00.000Z",
+    "dateModified": "2017-09-17T18:44:38.042Z",
+    "description": "შემდგომ მაგალითებში შეტანა და გამოტანა განსხვავდება მოთხოვნათა არსებობით ან არ არსებობით (&amp;gt;&amp;gt;&amp;gt; და &amp;#8230;&amp;#8203;) გავიხსენოთ მაგალითები, ნებისმიერი ტექსტი უნდა შეიყვანოთ გამოძახების შემდეგ. განაცხადის ეკრანზე გამოჩენის შემდეგ თუ ხაზები არ გამოჩნდება მაშინ ისინი გამოიძახე..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Python Coding - პროგრამირება პითონზე" href="https://Lh4cKg.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+</head>
+<body class="post-template">
+
+    
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="https://Lh4cKg.github.io">Home</a>
+        <!-- <a class="subscribe-button icon-feed" href="https://Lh4cKg.github.io/rss/">Subscribe</a> -->
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">არაფორმარული შესავალი პითონზე. ნაწილი 4</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-09-17">17 September 2017</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>შემდგომ მაგალითებში შეტანა და გამოტანა განსხვავდება მოთხოვნათა არსებობით ან არ არსებობით (&gt;&gt;&gt; და &#8230;&#8203;) გავიხსენოთ მაგალითები, ნებისმიერი ტექსტი უნდა შეიყვანოთ გამოძახების შემდეგ. განაცხადის ეკრანზე გამოჩენის შემდეგ თუ ხაზები არ გამოჩნდება მაშინ ისინი გამოიძახება interpreter-ის საშუალებით. მიაქციეთ ყურადღება, რომ ცალკეულ სტროფებზე მეორადი გამოძახება ნიშნავს ცარიელი სტრიქონის შეყვანის საჭიროებას; ეს გამოიყენება რამოდენიმე სტროფის ბრძანების დასრულებისთვის.
+ამ გაკვეთილებში მოცემული ყველა მაგალითი, ინტერაქტიულ რეჟიმში შეყვანის ჩათვლით,  მოიცავს კომენტარებს. კომენტარები Python-ში იწყება # და გრძელდება ხაზის ბოლომდე. კომენტარი შესაძლოა გამოჩნდეს ხაზის დასაწყისში, გამოტოვებისას ან კოდში, მაგრამ არა literal-ის ხაზს შიგნით, რადგან კომენტარი განმარტავს კოდს,რომელიც არ არის ინტერპრეტირებული  Python-ის მიერ, მაგალითების მოყვანისას ის შესაძლოა იყოს გამოტოვებული.
+მაგალითად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># this is the first comment
+spam = 1  # and this is the second comment
+          # ... and now a third!
+text = "# This is not a comment because it's inside quotes."</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1">1. პითონის როგორც კალკულატორის გამოყენება</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>მოდით ვცადოთ Python-ის რამოდენიმე მარტივი ბრძანება. ჩართეთ ინტერპრეტატორი და დაელოდეთ პირვანდელ მოთხოვნას &gt;&gt;&gt;. (ეს პროცესი არ წაგართმევთ დიდ დროს)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2">2. რიცხვები</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>თქვენ შეგიძლიათ ინტერპრეტატორის გამოიყენება, როგორც კალკულატორის: შეიყვანეთ სასურველი ლოგიკური გამოსახულება და ის გამოგითვლით მნიშვნელობას.   ლოგიკური გამოსახულების სინტაქსი მარტივია: ოპერატორი +, -, * და / ისინი მუშაობენ, ისე როგორც სხვა პროგრამულ ენაში (მაგალითად: პასკალის ან C), დიდი ბრჭყალები (()) შესაძლოა გამოყენებულიქნას დაჯგუფებებისთვის. მაგალითად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; 2 + 2
+4
+&gt;&gt;&gt; 50 – 5 * 6
+20
+&gt;&gt;&gt; (50 – 5 * 6) / 4
+5.0
+&gt;&gt;&gt; 8 / 5 # გაყოფა ყოველთვის აბრუნებს ციფრებს საწყის ეტაპზე
+1.6</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>მთელი რიცხვები (ე.ი 2, 4, 20) int ტიპის არიან, წილადი რიცხვები (ე.ი. 5.0, 1.6) მიეკუთვნებიან float ტიპს. მოგვიანებით ჩვენ შევიტყობთ უფრო მეტს რიცხვითი ტიპების შესახებ.</p>
+</div>
+<div class="paragraph">
+<p>გაყოფა (/) ყოველთვის აბრუნებს მცოცავ რიცხვებს(float). იმისათვის, რომ გაყოფის დროს მივიღოთ მთელი რიცხვი (და არა წილადი) ჩვენ შეგვიძლია გამოვიყენოთ // ოპერატორი; ნაშთის გამოსათვლელად გამოიყენეთ %:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; 17 / 3 # კლასიკური გაყოფა აბრუნებს მცოცავ რიცხვებს
+5.666666666666667
+&gt;&gt;&gt;
+&gt;&gt;&gt; 17 // 3 # გამყოფის ძირი აგდებს წილადის ნაწილს
+5
+&gt;&gt;&gt; 17 % 3 # ოპერატირი % აბრუნებს გაყოფიდან დარჩენილ ნაშთს
+2
+&gt;&gt;&gt; 5 * 3 + 2 # შედეგი * გამყოფი + დარჩენილი ნაშთი
+17</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>პითონში შეგიძლიათ გამოიყენოთ ** ოპერატორი ხარისხის გამოსათვლელად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; 5 ** 2 # 5 კვადრატში
+25
+&gt;&gt;&gt; 2 ** 7 # 2 ხარისხად 7
+128</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ტოლობის ნიშანი (=) გამოიყენება ცვლადის მნიშვნელობის მისანიჭებლად ამის შემდეგ, შედეგი არ გამოჩნდება მომდევნო ინტერაქტიულ მოთხოვნამდე(ანუ ცვლადის გამოძახებამდე):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; width = 20
+&gt;&gt;&gt; height = 5 * 9
+&gt;&gt;&gt; width * height
+900</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>თუ ცვლადი არ არის “განსაზღვრული(გამოცხადებული)” (ენიჭება მნიშვნელობა); მისი გამოყენების მცდელობა მოგცემთ შეცდომას:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; n # მცდელობა გამოიძახოთ ცვლადი რომელიც არ არის აღწერილი
+Traceback (most recent call last):
+File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'n' is not defined</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>არსებობს სრული მხარდაჭერა მცოცავი რიცხვებისთვის; ოპერატორი შერეული სხვადასხვა ობიექტების ტიპებთან ჯამში გვაძლევს სრულ ობიექტს მცოცავ რიცხვში:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; 3 * 3.75 / 1.5
+7.5
+&gt;&gt;&gt; 7.0 / 2
+3.5</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ინტერაქტიულ რეჟიმში ბოლოს გამოცხადებულ გამოსახულებებს ენიჭებათ ცვლადი _. ყოველივე ეს ნიშნავს იმას, რომ თქვენ პითონს იყენებთ, როგორც სამაგიდო კალკულატორს,  ეს გარკვეულწილად გაადვილებს გააგრძელოთ გამთვლები, მაგალითად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; tax = 12.5 / 100
+&gt;&gt;&gt; price = 100.50
+&gt;&gt;&gt; price * tax
+12.5625
+&gt;&gt;&gt; price + _
+113.0625
+&gt;&gt;&gt; round(_, 2)
+113.06</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ეს ცვლადი უნდა განიხილებოდეს როგორც მხოლოდ მომხმარებლის მიერ წაკითხული. ეს არ ნიშნავს იმას, რომ ჩვენ მკაფიოდ მივანიჭეთ მას ეს მნიშვნელობა - თქვენ შეგიძლიათ შექმნათ  დამოუკიდებელი ადგილობრივი ცვლადი იმავე სახელწოდებით, რომელიც ჩაანაცვლებს ჩაშენებულ ცვლადს თავისი ჯადოსნური თავისებურებებით.
+int და float-ის გარდა დამატებით, პითონს გააჩნია სხვა ციფრული ტიპების მხარდაჭერაც,  ისეთების როგორიცაა  Decimal და Fraction-ი. პითონს ასევე აქვს ჩაშენებული კომპლექსური რიცხვების მხარდაჭერა, იგი გამოიყენება j ან  J სუფიქსისთვის, რომ მიუთითოს წარმოსახვითი ნაწილი (მაგალითად 3+5j).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3">3. სტრიქონები</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ციფრების გარდა პითონს შეუძლია სტრიქონებთან მუშაობა, რომლებიც შესაძლოა გამოხატულ იქნან რამოდენიმე სიტყვით და შესაძლოა იყოს ჩაწერილი ერთმაგ ბრჭყალებში (’&#8230;&#8203;’) ან ორმაგ ბრჭყალებში ("&#8230;&#8203;") ერთი და იმავე შედეგით.  \ ნიშანი შეიძლება გამოყენებულ იქნას სპეციალური ციტატების ჩასმისას:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; 'spam eggs' # ერთმაგი ბრჭყალით
+'spam eggs'
+&gt;&gt;&gt; 'doesn\'t' # სპეცილური ციტატის ჩასმისას \' ნიშნის გამოყენება ერთმაგ ბრჭყალში
+"doesn't"
+&gt;&gt;&gt; "doesn't" # ორმაგი ბრჭყალით
+"doesn't"
+&gt;&gt;&gt; '"Yes," he said.'
+'"Yes," he said.'
+&gt;&gt;&gt; "\"Yes,\" he said."
+'"Yes," he said.'
+&gt;&gt;&gt; '"Isn\'t," she said.'
+'"Isn\'t," she said.'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ინტერაქტიულ ინტერპრეტატორში გამავალი სტრიქონი მოთავსებულია ბრჭყალებში და სპეციალურ სიმბოლოებში. მიუხედავად იმისა, რომ ეს შეიძლება ზოგჯერ გამოიყურებოდეს როგორც განსხვავებული  შეყვანის მეთოდი (შერეული კოდირებები შესაძლოა შეიცვალონ), ორი სტრიქონი რჩება ეკვივალენტური. სტრიქონი მოთავსებულია ორ ბრჭყალში მაშინ, როდესაც სტრიქონი შეიცავს ერთმაგ აპოსტროფს და არა ორმაგს, წინააღმდეგ შემთხვევაში ის მოთავსებული იქნება ერთმაგ ბრჭყალში. print() ფუნცია გახდის გამოსატან ჩანაწერს წაიკითხვადს, ზედმეტი ბრჭყალების და სიმბოლოების გარეშე:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; '"Isn\'t," she said.'
+'"Isn\'t," she said.'
+&gt;&gt;&gt; print('"Isn\'t," she said.')
+"Isn't," she said.
+&gt;&gt;&gt; s = 'First line.\nSecond line.' # \n გულისხმობს ახალ ხაზზე გადასვლას
+&gt;&gt;&gt; s # print() ფუნქციის გარეშე, \n შედის გამოსატან ჩანაწერში
+'First line.\nSecond line.'
+&gt;&gt;&gt; print(s) # print() ფუნქციის გამოყენებით, \n უზრუნველყოფს ახალ ხაზზე გადასვლას
+First line.
+Second line.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>თუ თქვენ არ გინდათ \ სიმბოლოს როგორც ინტერპრეტირებული სპეციალური სიმბოლოს სახით შეყვანა, მაშინ უბრალოდ ჩაწერეთ  r პირველი წინადადების ჩაწერამდე:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; print('C:\some\name') # აქ \n უზრუნველყოფს ახალ ხაზზე გადასვლას!
+C:\some
+ame
+&gt;&gt;&gt; print(r'C:\some\name') # r იწერება ბრჭყალის წინ
+C:\some\name</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>სტრიქონის ლიტერალები შესაძლოა იკავებდნენ რამოდენიმე სტროფს. ერთ-ერთი გზა არის გამოვიყენოთ სამმაგი ბრჭყალები: """&#8230;&#8203;""" ან '''&#8230;&#8203;'''. სტროფი ავტომატურად სრულდება. ასე რომ არ მოხდეს, სტროფის ბოლოს უნდა დავსვათ \ . მაგალითად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>print("""\
+Usage: thingy [OPTIONS]
+-h Display this usage message
+-H hostname Hostname to connect to
+""")</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Usage: thingy [OPTIONS]
+-h Display this usage message
+-H hostname Hostname to connect to</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>განმარტება (სხვა კომპიუტერული ენებისგან განსხვავებით სპეციალურ სიმბოლოებს როგორიცაა  \n გააჩნია იგივე მნიშვნელობა, რაც (’&#8230;&#8203;’) და ორმაგ ("&#8230;&#8203;") ბრჭყალებს. ამ ორს შორის  ერთადერთი განსხვავება ისაა, რომ ერთმაგ ბრჭყალში თქვენ არ გესაჭიროებათ  " სიმბოლოს  ჩაწერა (თუმცა სავალდებულოა \’ სიმბოლო).</p>
+</div>
+<div class="paragraph">
+<p>თქვენ შეგიძლიათ გააერთიანოთ სტრიქონები(შეკრიბოთ) + ოპერატორის და *: განმეორებითი სიმბოლოს დახმარებით:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; # 3 ჯერ 'un', დამატებული 'ium'
+&gt;&gt;&gt; 3 * 'un' + 'ium'
+'unununium'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ორი ერთმანეთთან ახლოს მდგარი სტრიქონის ლიტერალი (ბრჭყალებში მოთავსებული) ავტომატურად ერთიანდება:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; 'Py' 'thon'
+'Python'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ეს ფუნქცია მუშაობს მხოლოდ ორ ლიტერალთან თუმცა, არა ცვლადებთან და გამოსახულებებთან:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; prefix = 'Py'
+&gt;&gt;&gt; prefix 'thon' # არ შეიძლება გააერთიანდეს ცვლადი და სტრიქონის ლიტერალი
+...
+SyntaxError: invalid syntax
+&gt;&gt;&gt; ('un' * 3) 'ium'
+...
+SyntaxError: invalid syntax</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>თუ თქვენ გინდათ ლიტერალის და ცვლადის გაერთიანება გამოიყენეთ +:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; prefix + 'thon'
+'Python'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ეს ფუნქცია განსაკუთრებით სასარგებლოა მაშინ, როდესაც თქვენ გსურთ გრძელი სტროფების დაყოფა:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; text = ('Put several strings within parentheses '
+...         'to have them joined together.')
+&gt;&gt;&gt; text
+'Put several strings within parentheses to have them joined together.'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>სტრიქონები შესაძლოა დაიწეროს ინდექსით 0. აქ არ არსებობს გარკვეული ტიპის სიმბოლოები; სიმბოლოები უბრალოდ ერთი ზომის არიან:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word = 'Python'
+&gt;&gt;&gt; word[0] # სიმბოლო პოზიციაში 0
+'P'
+&gt;&gt;&gt; word[5] # სიმბოლო პოზიციაში 5
+'n'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ინდექსად ასევე შესაძლოა გამოვიყენოთ უარყოფითი ციფრები იმისათვის, რომ წერა მარჯვნიდან დავიწყოთ:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word[-1] # ბოლო სიმბოლო
+'n'
+&gt;&gt;&gt; word[-2] # ბოლოდან მეორე სიმბოლო
+'o'
+&gt;&gt;&gt; word[-6] # ბოლოდან მეექვსე სიმბოლო
+'P'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>გაითვალისწინეთ, რომ -0 იგივეა რაც  0, უარყოფითი ინდექსები იწყება -1-დან. ინდექსაციასთან ერთად ამ ფუნქციას აქვს სტროფების დაყოფის მხარდაჭერაც. იმ დროს როდესაც ინდექსაციას ვიყენებთ სტროფების დაყოფისთვის,  მიერთება გაძლევთ საშუალებას მიიღოთ ქვესტრიქონი:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word[0:2] # სიმბოლო პოზიციიდან 0-დან - 2-მდე
+'Py'
+&gt;&gt;&gt; word[2:5] # სიმბოლო პოზიციიდან 2-დან - 5-მდე
+'tho'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>გაითვალისწინეთ რომ დასაწყისი ყოველთვის შეიცავს და დასარული ყოველთვის გამოტოვებულია. ეს გარანტიას იძლევა იმისა, რომ s[:i] + s[i:] სტრიქონი ყოველთვის  არის s-ის ტოლი:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word[:2] + word[2:]
+'Python'
+&gt;&gt;&gt; word[:4] + word[4:]
+'Python'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>სიჩუმის ინდექსს აქვს სასარგებლო უპირატესობა, რადგან გამოტოვებული პირველი ინდექსი ნულის ტოლია, გამოტოვებული მეორე ინდექსი კი მოცემული ზომის ტოლია.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word[:2] # სიმბოლო დასაწყისიდან  2-მდე
+'Py'
+&gt;&gt;&gt; word[4:] # სიმბოლო მეოთხე პოზიციიდან ბოლომდე
+'on'
+&gt;&gt;&gt; word[-2:] # სიმბოლო ბოლოდან მეორე პოზიციიდან ბოლომდე
+'on'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ერთ-ერთი გზა, დავიმახსოვროთ თუ როგორ მუშაობენ ინდექსები, ესაა გავიხსენოთ თუ როგორ არიან ისინი განლაგებული სიმბოლოებს შორის, მარცხენა კუთხეში მყოფი სიმბოლო ინდექსით 0. მაშინ მარჯვენა კუთხის პირველი სომბოლო n იქნება ინდექსით n, მაგალითად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>+---+---+---+---+---+---+
+| P  |   y |  t |  h |  o  |  n |
++---+---+---+---+---+---+
+0     1    2   3    4    5    6
+-6  -5   -4  -3   -2   -1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>პირველი რიგის ციფრები სტრიქონებშI გაძლევთ პოზიციას ინდექსით  0 &#8230;&#8203; 6; მეორე რიგი კი შესაბამის უარყოფით მაჩვენებელს. ხაზი i-დან j-მდე მოიცავს i და j გვერდებს შორის მოთავსებულ ყველა სიმბოლოს. შესაბამისად დადებითი ინდექსებისთვის ჩამონახაზის სიგრძე არის ინდექსების სხვაობა, იმ შემთხვევაში თუ ორივე მოთავსებულია ფარგლებსშორის. მაგალითისთვის, სიტყვის სიგრძე [1:3] არის 2. ძალიან დიდი ინდექსის გამოყენების მცდელობა დამთავრება შეცდომით:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word[42] # სიტყვას აქვს მხოლოდ 6 სიმბოლო
+Traceback (most recent call last):
+File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+IndexError: string index out of range</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>თუმცა, დიაპაზონს გარეთ მყოფ ინდექსებს პროგრამა ამუშავებს  კორექტულად გამყოფი ხაზების მეშვეობით:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word[4:42]
+'on'
+&gt;&gt;&gt; word[42:]
+''</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>პითონის სტრიქონების შეცვლა არ შეიძლება, ისინი შეუცვლელნი(immutable) არიან. ამიტომაც სტროფში ინდექსის პოზიციის მითითება იწვევს შეცდომას:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; word[0] = 'J'
+...
+TypeError: 'str' object does not support item assignment
+&gt;&gt;&gt; word[2:] = 'py'
+...
+TypeError: 'str' object does not support item assignment</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>თუ თქვენ გჭირდებათ განსხვავებული სტრიქონი, თქვენ უნდა შექმნათ ახალი ჩანაწერი:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; 'J' + word[1:]
+'Jython'
+&gt;&gt;&gt; word[:2] + 'py'
+'Pypy'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ჩაშენებული ფუნქცია len()-ი აბრუნებს სტრიქონის სიგრძეს:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; s = 'supercalifragilisticexpialidocious'
+&gt;&gt;&gt; len(s)
+34</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>იხილეთ ასევე:
+Textseq სტროფები არიან თანმიმდევრობის მაგალითი, მათ გააჩნიათ საერთო მხარდაჭერა მსგავსი ოპერაციების ტიპების. სტროფების მეთოდს გააჩნია მრავალმხრივი ძირითადი ტრანსფორმაციისა და ძიების მხარდაჭრა.   Formatstrings ინფორმაცია არის სტროფების ფორმატირების შესახებ str.format(). old-string-formatting-ი არის ინფორმაცია  ძველი ფორმატირების შესახებ, მაშინ როდესაც სტროფი და მნიშვნელი არის მარცხენა მხარეს, მაშინ ოპერატორის მნიშვნელობა იქნება %. დამატებითი ინფორმაცია მოთავსებულია  ქვემოთ.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4">4. სია</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>პითონმა იცის რიგი რთული(კომპლექსური) მონაცემების ტიპები,  რომელიც გამოიყენება სხვადასხვა მნიშვნელობების დაჯუფებისთვის. ყველაზე უნივერსალური გზა არის სია, რომელიც შეიძლება ჩაიწეროს როგორც მნიშვნელობების სია, რომელიც იქნება გამოყოფილი მძიმეთი(ელემენტი) და მოთავსდება კვადრატულ ფრჩხილებში.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; squares = [1, 4, 9, 16, 25]
+&gt;&gt;&gt; squares
+[1, 4, 9, 16, 25]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>როგორც სტრიქონები, ასევე სიაც შეიძლება დაიყოს და მიენიჭოს ინდექსი:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; squares[0] # ინდექსაცია აბრუნებს სიის პირველ ელემენტს
+1
+&gt;&gt;&gt; squares[-1] # ინდექსაცია აბრუნებს სიის ბოლო ელემენტს
+25
+&gt;&gt;&gt; squares[-3:] # სიის დაყოფა შესაბამისი ინდექსაციით აბრუნებს ახალ სიას
+[9, 16, 25]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>დაყოფის ყველა ოპერაცია აბრუნებს ახალ სიას, რომელიც მოიცავს საჭირო ელემენტს. ეს ნიშნავს იმას, რომ შემდეგი დაყოფა აბრუნებს სიის ასლს:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; squares[:]
+[1, 4, 9, 16, 25]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>სიას ასევე აქვს ისეთი ოპერაციების მხარდაჭერა როგორიცაა გაერთიანება(concatenation):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>სტრიქონებისგან განსხვავებით, რომელიც შეუცვლელია(immutable), სიის მნიშვნელობების შეცვლა(mutable) შესაძლებელია:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; cubes = [1, 8, 27, 65, 125] # ზოგიერთი მნიშვნელობა არასწორია
+&gt;&gt;&gt; 4 ** 3 # მაგ. 4 კუბი არის 64, და არა 65! როგორც სიაშია ნაჩვენები
+64
+&gt;&gt;&gt; cubes[3] = 64 # ჩავანაცვლოთ არასწორი მნიშვნელობა
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>თქვენ ასევე შეგიძლიათ სიის ბოლოს დაამატოთ ახალი ელემენტები, append() მეთოდის საშუალებით (ჩვენ შევიტყობთ მეტს ამ მეთოდის შესახებ მოგვიანებით):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; cubes.append(216) # დავამატოთ 6 კუბი სიაში
+&gt;&gt;&gt; cubes.append(7 ** 3) # დავამატოთ 7 კუბი სიაში
+&gt;&gt;&gt; cubes
+[1, 8, 27, 64, 125, 216, 343]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ასევე შესაძლებლია დანაყოფების გადანაწილება. ამან შესაძლოა გაადიდოს სიის ზომა ან სრულიად გაასუფთავოს ის:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+&gt;&gt;&gt; # ჩავანაცვლოთ ზოგი მნიშვნელობა
+&gt;&gt;&gt; letters[2:5] = ['C', 'D', 'E']
+&gt;&gt;&gt; letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+&gt;&gt;&gt; # ახლა ამოვიღოთ ისინი
+&gt;&gt;&gt; letters[2:5] = []
+&gt;&gt;&gt; letters
+['a', 'b', 'f', 'g']
+&gt;&gt;&gt; # წაშალეთ სიიდან ყველა ელემენტი და ჩაანაცვლეთ ისინი ცარიელი სიით
+&gt;&gt;&gt; letters[:] = []
+&gt;&gt;&gt; letters
+[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ჩაშენებული ფუნქცია len()-ი ასევე გამოიყენება სიებისთვის:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; letters = ['a', 'b', 'c', 'd']
+&gt;&gt;&gt; len(letters)
+4</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>შესძლოა ჩაშენებული სიის შექმნაც (შევქმნათ სია, რომელიც მოიცავს სხვა სიას შიგნით) მაგალითად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; a = ['a', 'b', 'c']
+&gt;&gt;&gt; n = [1, 2, 3]
+&gt;&gt;&gt; x = [a, n]
+&gt;&gt;&gt; x
+[['a', 'b', 'c'], [1, 2, 3]]
+&gt;&gt;&gt; x[0]
+['a', 'b', 'c']
+&gt;&gt;&gt; x[0][1]
+'b'</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_5">5. პირველი ნაბიჯები პროგრამირებისკენ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>რათქმაუნდა ჩვენ პითონის გამოყენება შეგვიძლია გაცილებით უფრო რთული ამოცანებისთვის ვიდრე ეს არის ორის და ორის ერთმანეთთან დამატება. მაგალითად, შეგვიძლია დავწეროთ საწყისი ქვემიმდევრობა Fibonacci-ის რიგში შემდეგნაირად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; # Fibonacci series:
+...    # ორი ელემენტის ჯამი განსაზღვრავს მომდევნოს
+... a, b = 0, 1
+&gt;&gt;&gt; while b &lt; 10:
+...         print(b)
+...         a, b = b, a+b
+...
+1
+1
+2
+3
+5
+8</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ამ მაგალითს შემოაქვს რამოდენიმე ახალი ფუნქცია.
+პირველ სტრიქონს გააჩნია უამრავი დანიშნულება: a და b ერთდროული გამოყენებით მივიღებთ ახალ მნიშვნელს 0 და 1. ბოლო სტრიქონზე მისი იგივენაირად  გამოყენება გამოხატავს იმას, რომ ყველა ელემენტზე ადრე გამოითვლება მარჯვენა მხარეს მოთავსებული მნიშვნელობები. კუთხური მნიშვნელობები გამოითვლებიან, როგორც წესი, მარცხნიდან მარჯვნივ.
+ციკლი გრძელდება მანამ, სანამ არ მიიღება სწორი პასუხი (აქ: b &lt; 10). პითონში ისევე როგორც C-ში, ნებისმიერი არანულოვანი სრული ციფრის მნიშვნელობა ზუსტია, ხოლო ნულოვანის - ცრუ. პირობა, ასევე, შეიძლება იყოს  სტრიქონის ან სიის მნიშვნელობა, ფაქტობრივად ნებისმიერი
+თანმიმდევრობა; ყველაფერი არანულოვანი მნიშვნელობის მქონე არის ზუსტი, ხოლო ცარიელი თანმიმდევრობები კი ცრუ. ტესტში მოცემულია მარტივი მაგალითი. შედარების სტანდარტული ოპერატორები ჩაიწერებიან ისევე, როგორც   C-ში: C: &lt; (ნაკლებია), &gt; (მეტია), == (ტოლია), &#8656; (ნაკლებია ან ტოლია), &gt;= (მედია ან ტოლია) and != (არ უდრის).
+წანაცვლების ციკლი: წანაცვლება არის Python-ის გზა გამოეყოს ჯგუფურ ოპერატორებს.  ინტერაქტიულ რეჟიმში თქვენ უნდა შეიყვანოთ სანიშნე tab ან გამოტოვება(s) ყველა წანაცვლების სტროფში. პრაქტიკაში თქვენ Python-თვის შექმნით გაცილებით უფრო რთულ შეყვანას ტექსტური რედაქტორის საშუალებით; ყველა ტექსტურ რედაქტორს გააჩნია ავტომატური  წანაცვლის ოპერატორი. როდესაც ძირითადი ოპერატორი შეგყავთ ინტერაქტიულ რეჟიმში მას თან უნდა დაერთოს ცარიელი ხაზი, იმისათვის, რომ მივუთითოთ დასასრული (რადგან სინტაქსური ანალიზატორი ვერ საზღვრავს თუ სად დაასრულეთ წინადადება). გაითვალისწინეთ, რომ ყველა ხაზი მოთავსებული საბაზო ბლოკის ფარგლებში უნდა იყოს იგივე ჯამის.
+print() ფუნქცია ბეჭდავს გადაწოდებულ მნიშვნელობებს. ეს განსხვავდება ჩვეულებრივი  გამოსახულების გამოხატვისგან (როგორც ეს უკვე გავაკეთეთ კალკულატორის მაგალითში) სხვადასხვა არგუმენტის მცურავი წერტილების და სტრიქონების რაოდენობის დამუშავებით. სტრიქონები იბეჭდება ბრჭყალების გარეშე, მათ ნაცვლად ობიექტებს შორის იწერება გამოტოვება. მშასადამე, თქვენ შეგიძლიათ დააფორმატოთ შემდეგნაირად:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; i = 256*256
+&gt;&gt;&gt; print('The value of i is', i)
+The value of i is 65536</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>უკანასკნელ არგუმენტში შეგვიძლია გამოვიყენოთ მთავარი სიტყვა, რათა თავიდან ავიცილოთ ახალი ხაზი გასვლის შემდეგ,  ან დავასრულოთ გასვლა ახალი სტროფით:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&gt;&gt;&gt; a, b = 0, 1
+&gt;&gt;&gt; while b &lt; 1000:
+... print(b, end=',')
+... a, b = b, a+b
+...
+1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:hp-tags: docs[დოკუმენტაცია],python[პითონი],tutorial[გაკვეთილი]</pre>
+</div>
+</div>
+</div>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="" style="background-image: url(https://avatars3.githubusercontent.com/u/3719921?v=4)"><span class="hidden">4o4u4 (L.G)'s Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="">4o4u4 (L.G)</a></h4>
+
+                    <p>Read <a href="">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Tbilisi, Georgia</span>
+                    <span class="author-link icon-link"><a href="http://python.ge">http://python.ge</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=%E1%83%90%E1%83%A0%E1%83%90%E1%83%A4%E1%83%9D%E1%83%A0%E1%83%9B%E1%83%90%E1%83%A0%E1%83%A3%E1%83%9A%E1%83%98%20%E1%83%A8%E1%83%94%E1%83%A1%E1%83%90%E1%83%95%E1%83%90%E1%83%9A%E1%83%98%20%E1%83%9E%E1%83%98%E1%83%97%E1%83%9D%E1%83%9C%E1%83%96%E1%83%94.%20%E1%83%9C%E1%83%90%E1%83%AC%E1%83%98%E1%83%9A%E1%83%98%204&amp;url=https://Lh4cKg.github.io/2017/09/17/An-Informal-Introduction-to-Python.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://Lh4cKg.github.io/2017/09/17/An-Informal-Introduction-to-Python.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://Lh4cKg.github.io/2017/09/17/An-Informal-Introduction-to-Python.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+    </article>
+
+</main>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="https://Lh4cKg.github.io">Python Coding - პროგრამირება პითონზე</a> &copy; 2017</section>
+        <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//Lh4cKg.github.io/themes/Casper/assets/js/jquery.fitvids.js?v=1.0.0"></script>
+    <script type="text/javascript" src="//Lh4cKg.github.io/themes/Casper/assets/js/index.js?v=1.0.0"></script>
+
+</body>
+</html>
